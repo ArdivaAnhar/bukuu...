@@ -16,21 +16,36 @@ class Welcome extends CI_Controller
 
 	public function index()
 	{
-		$this->load->model('crud');
-		$data['buku'] = $this->crud->getDataBuku();
-		$data['content'] = $this->load->view('tokobuku/index', $data, TRUE);
+		$data['content'] = $this->load->view('tokobuku/index', '', TRUE);
 
 		$this->load->view('layouts/layout', $data);
 	}
 
 	public function cari()
 	{
-		$judul = $this->input->post('keyword'); // Ambil kata kunci dari form
+		$judul = $this->input->post('keyword');
 		$data['buku'] = $this->crud->cari($judul);
-		$data['content'] = $this->load->view('tokobuku/index', $data, TRUE);
+
+		if ($data['buku'] !== false) {
+			$this->session->set_flashdata('success', 'Anda mencari' . "`<b>$judul</b>`");
+		} else {
+			$this->session->set_flashdata('success', 'Anda mencari' . "`<b>$judul</b>`");
+			$this->session->set_flashdata('error', 'Data tidak ditemukan.');
+		}
+
+		$data['content'] = $this->load->view('tokobuku/search', $data, TRUE);
+		$this->load->view('layouts/layout', $data);
+	}
+
+	public function buku()
+	{
+		$this->load->model('crud');
+		$data['buku'] = $this->crud->getDataBuku();
+		$data['content'] = $this->load->view('tokobuku/buku', $data, TRUE);
 
 		$this->load->view('layouts/layout', $data);
 	}
+
 	public function dataBuku()
 	{
 		$this->load->model('crud');

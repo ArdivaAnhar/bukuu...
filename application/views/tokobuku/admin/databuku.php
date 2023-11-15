@@ -1,9 +1,7 @@
         <div class="container col-10 pt-5 pb-5">
             <div class="card shadow">
-                <div class="card-header">
-                    <div class="card-title">
-                        <h5>Pengelolaan Data Buku</h5>
-                    </div>
+                <div class="card-header h5">
+                    Pengelolaan Data Buku
                 </div>
                 <div class="card-body">
                     <!-- alert tambah data -->
@@ -91,7 +89,7 @@
                                                                 <label for="nama_buku">Nama Buku</label>
                                                             </div>
                                                             <div class="form-floating mb-3">
-                                                                <input type="number" class="form-control" name="harga"
+                                                                <input type="text" class="form-control" name="harga"
                                                                     id="harga" placeholder="Harga"
                                                                     value="<?= $Get->harga; ?>">
                                                                 <label for="harga">Harga</label>
@@ -193,7 +191,7 @@
                                             <label for="nama_buku">Nama Buku</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input type="number" class="form-control" name="harga" id="harga"
+                                            <input type="text" class="form-control" name="harga" id="harga"
                                                 placeholder="Harga" required>
                                             <label for="harga">Harga</label>
                                         </div>

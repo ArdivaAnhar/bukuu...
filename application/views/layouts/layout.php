@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light shadow sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
         <div class="container">
             <a class="navbar-brand fs-4" style="transform: rotate(5deg);" href="<?= site_url('Welcome') ?>"><i class="fas fa-book-open fa-xl" style="transform: rotate(-15deg);"></i>
                 <b>ToKoBukU</b></a>
@@ -29,6 +29,9 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link text-uppercase" aria-current="page" href="<?= site_url('Welcome') ?>"><i class="fas fa-house"></i> <b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" aria-current="page" href="<?= site_url('Welcome/buku') ?>"><i class="fas fa-book"></i> <b>Buku</b></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

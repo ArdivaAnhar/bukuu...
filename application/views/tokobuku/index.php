@@ -1,48 +1,21 @@
-        <div class="container col-10 pt-5 pb-5">
-            <div class="card shadow">
-                <div class="card-header">
-                    <div class="card-title">
-                        <h5>Data Buku</h5>
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="<?= base_url('assets/img/bg.png') ?>" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Bukuu...</h1>
+            <p class="lead">"Terkadang, buku adalah jendela ke dunia lain, membawa kita ke tempat-tempat yang belum
+                pernah kita kunjungi dan mengungkapkan cerita-cerita yang belum pernah kita dengar."</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <form action="<?php echo site_url('Welcome/cari') ?>" method="post">
+                    <div class="d-grid d-flex gap-2 form-floating">
+                        <input type="search" id="cari" class="form-control shadow col-xl-12" name="keyword" placeholder="Cari judul buku..." required>
+                        <label for="cari" class="form-label">Cari judul buku...</label>
+                        <button class="btn btn-outline-primary shadow px-3">Cari</button>
                     </div>
-                </div>
-                <div class="card-body">
-                    <form action="<?php echo site_url('Welcome/cari') ?>" method="post">
-                        <div class="d-flex col-4 mb-3 gap-2">
-                            <input type="search" class="form-control" name="keyword" placeholder="Cari judul buku..." required>
-                            <button class="btn btn-outline-primary" type="submit">Cari</button>
-                        </div>
-                    </form>
-
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col">No.</th>
-                                    <th scope="col">ID Buku</th>
-                                    <th scope="col">Kategori</th>
-                                    <th scope="col">Nama Buku</th>
-                                    <th scope="col">Harga</th>
-                                    <th scope="col">Stok</th>
-                                    <th scope="col">Penerbit</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php $no = 1;
-                                foreach ($buku as $Get) : ?>
-                                    <tr>
-                                        <th scope="row"><?= $no . "."; ?></th>
-                                        <td><?= $Get->id_buku; ?></td>
-                                        <td><?= $Get->kategori; ?></td>
-                                        <td><?= $Get->nama_buku; ?></td>
-                                        <td><?= $Get->harga; ?></td>
-                                        <td><?= $Get->stok; ?></td>
-                                        <td><?= $Get->penerbit; ?></td>
-                                    </tr>
-                                <?php $no++;
-                                endforeach; ?>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
+    </div>
+</div>

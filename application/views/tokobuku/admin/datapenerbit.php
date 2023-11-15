@@ -1,9 +1,7 @@
         <div class="container col-10 pt-5 pb-5">
             <div class="card shadow">
-                <div class="card-header">
-                    <div class="card-title">
-                        <h5>Pengelolaan Data Penerbit</h5>
-                    </div>
+                <div class="card-header h5">
+                    Pengelolaan Data Penerbit
                 </div>
                 <div class="card-body">
                     <!-- alert tambah data -->

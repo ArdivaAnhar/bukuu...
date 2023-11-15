@@ -14,7 +14,12 @@ class crud extends CI_Model
     {
         $this->db->like('nama_buku', $judul);
         $query = $this->db->get('tb_buku');
-        return $query->result();
+
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return false;
+        }
     }
     function addBuku($tabel, $data = array())
     {

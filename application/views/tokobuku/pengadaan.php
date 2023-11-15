@@ -1,9 +1,7 @@
-<div class="container col-6 mt-5">
+<div class="container col-10 mt-5">
     <div class="card shadow">
-        <div class="card-header">
-            <div class="card-title">
-                <h5>Laporan Pengadaan Buku</h5>
-            </div>
+        <div class="card-header h5">
+            Laporan Pengadaan Buku
         </div>
         <div class="card-body">
             <div class="table-responsive">
